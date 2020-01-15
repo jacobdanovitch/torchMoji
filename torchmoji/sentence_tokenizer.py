@@ -14,8 +14,6 @@ from torchmoji.global_variables import SPECIAL_TOKENS
 
 # import torch
 
-from sklearn.model_selection import train_test_split
-
 from copy import deepcopy
 
 class SentenceTokenizer():
@@ -160,6 +158,8 @@ class SentenceTokenizer():
             How many tokens have been added to the vocab. Make sure to extend
             the embedding layer of the model accordingly.
         """
+
+        from sklearn.model_selection import train_test_split
 
         # If passed three lists, use those directly
         if isinstance(split_parameter, list) and \
